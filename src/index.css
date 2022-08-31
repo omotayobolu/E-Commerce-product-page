@@ -10,3 +10,11 @@ body {
   font-size: 16px;
   background-color: hsl(0, 0%, 100%);
 }
+
+.App {
+  margin: 0 10%;
+}
+
+ul {
+  list-style-type: none;
+}

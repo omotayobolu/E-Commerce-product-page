@@ -1,0 +1,52 @@
+.heading {
+  padding: 2rem 0;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.headingContent {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-items > * {
+  margin-right: 1.5rem;
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-items > *:hover {
+  color: hsl(220, 13%, 13%);
+  /* border-bottom: 5px solid hsl(26, 100%, 55%); */
+}
+
+.headingContent2 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headingContent2 > :nth-child(1) {
+  max-width: 20%;
+  height: 40%;
+  cursor: pointer;
+}
+
+.headingContent2 > :nth-child(2) {
+  width: 35%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.headingContent2 > :nth-child(2):hover {
+  border-radius: 50%;
+  border: 2px solid hsl(26, 100%, 55%);
+}
