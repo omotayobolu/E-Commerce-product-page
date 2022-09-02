@@ -19,7 +19,7 @@ const Header = (props) => {
         </ul>
       </div>
       <div className={classes.headingContent2}>
-        <img src={CartIcon} alt="" />
+        <img onClick={props.onShowCart} src={CartIcon} alt="" />
         <img src={HeaderAvatar} alt="" />
       </div>
     </header>

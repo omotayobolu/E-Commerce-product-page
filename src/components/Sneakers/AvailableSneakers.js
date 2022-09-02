@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Shoe1 from "../../assets/image-product-1.jpg";
 import Shoe1Thumbnail from "../../assets/image-product-1-thumbnail.jpg";

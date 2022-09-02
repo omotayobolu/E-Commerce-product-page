@@ -1,0 +1,19 @@
+.cart-header {
+  padding: 1rem;
+}
+
+.hide-cart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80%;
+  color: hsl(219, 9%, 45%);
+}
