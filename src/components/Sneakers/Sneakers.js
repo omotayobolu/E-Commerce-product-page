@@ -3,10 +3,10 @@ import AvailableSneakers from "./AvailableSneakers";
 import Plus from "../../assets/icon-plus.svg";
 import Minus from "../../assets/icon-minus.svg";
 import CartIcon from "../../assets/icon-cart.svg";
-
+// import CartContext from "../store/Cart-context";
 import classes from "./Sneakers.module.css";
 
-const Sneakers = () => {
+const Sneakers = (props) => {
   return (
     <section className={classes.sneakers}>
       <AvailableSneakers />
@@ -27,9 +27,9 @@ const Sneakers = () => {
         </div>
         <div className={classes.cart}>
           <div className={classes.cart1}>
-            <img src={Minus} alt="" />
-            0
-            <img src={Plus} alt="" />
+            <img onClick={props.removeShoe} src={Minus} alt="" />
+            {props.number}
+            <img onClick={props.addShoe} src={Plus} alt="" />
           </div>
           <button className={classes["add-to-cart"]}>
             <img src={CartIcon} alt="" />
