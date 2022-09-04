@@ -100,3 +100,7 @@
 .add-to-cart img {
   width: 20px;
 }
+
+.removeDisabled {
+  opacity: 0.5;
+}

@@ -21,7 +21,9 @@ const Header = (props) => {
       <div className={classes.headingContent2}>
         <div className={classes.CartIcon}>
           <img onClick={props.onShowCart} src={CartIcon} alt="" />
-          <div className={classes["cart-number"]}>{props.number}</div>
+          {props.number !== 0 && (
+            <div className={classes["cart-number"]}>{props.number}</div>
+          )}
         </div>
         <img src={HeaderAvatar} alt="" />
       </div>

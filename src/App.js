@@ -15,19 +15,32 @@ const App = () => {
     setShowCart(false);
   };
 
+  // const setNoOfCartItemsHandler = () => {
+  //   return setNumber(number);
+  // };
+
   const addShoe = () => {
     setNumber((prevNumber) => prevNumber + 1);
   };
 
-  const removeShoe = () => {
+  let removeShoe = () => {
     setNumber((prevNumber) => prevNumber - 1);
   };
+
+  if (number <= 0) {
+    removeShoe = () => setNumber(0);
+  }
 
   return (
     <div className="App">
       {showCart && <Cart onHideCart={hideCartHandler} />}
       <Header number={number} onShowCart={showCartHandler} />
-      <Sneakers number={number} addShoe={addShoe} removeShoe={removeShoe} />
+      <Sneakers
+        onShowCart={showCartHandler}
+        number={number}
+        addShoe={addShoe}
+        removeShoe={removeShoe}
+      />
     </div>
   );
 };
