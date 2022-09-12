@@ -34,15 +34,21 @@ const SNEAKERS_AVAILABLE = [
   },
 ];
 
-const AvailableSneakers = () => {
+const AvailableSneakers = (props) => {
   return (
-    <div className={classes.displayedShoes}>
-      <img src={Shoe1} alt="" />
-      <div className={classes.thumbnails}>
+    <div>
+      <div className={classes.shoeSection}>
         {SNEAKERS_AVAILABLE.map((shoe) => {
           return (
-            <div key={shoe.id} className={classes.thumbnail}>
-              {shoe.shoeThumbnail}
+            <div
+              key={shoe.id}
+              onClick={() => props.changeShoe(shoe.id)}
+              className={classes.displayedShoes}
+            >
+              {props.selectedShoe === shoe.id ? shoe.shoe : ""}
+              <div>
+                <div className={classes.thumbnails}>{shoe.shoeThumbnail}</div>
+              </div>
             </div>
           );
         })}

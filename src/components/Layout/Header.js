@@ -1,11 +1,11 @@
 import React from "react";
 
 import Logo from "../../assets/logo.svg";
-import CartIcon from "../../assets/icon-cart.svg";
 import HeaderAvatar from "../../assets/image-avatar.png";
 import classes from "./Header.module.css";
+import HeaderCartButton from "./HeaderCartButton";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className={classes.heading}>
       <div className={classes.headingContent}>
@@ -19,12 +19,7 @@ const Header = (props) => {
         </ul>
       </div>
       <div className={classes.headingContent2}>
-        <div className={classes.CartIcon}>
-          <img onClick={props.onShowCart} src={CartIcon} alt="" />
-          {props.number !== 0 && (
-            <div className={classes["cart-number"]}>{props.number}</div>
-          )}
-        </div>
+        <HeaderCartButton />
         <img src={HeaderAvatar} alt="" />
       </div>
     </header>

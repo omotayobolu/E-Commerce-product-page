@@ -5,16 +5,21 @@ import Minus from "../../assets/icon-minus.svg";
 import CartIcon from "../../assets/icon-cart.svg";
 // import CartContext from "../store/Cart-context";
 import classes from "./Sneakers.module.css";
-import shoe1 from "../../assets/image-product-1.jpg";
 
 const Sneakers = (props) => {
-  const [selectedShoe, setSelectedShoe] = useState(<img src={shoe1} alt="" />);
+  const [selectedShoe, setSelectedShoe] = useState("s1");
+
+  const changeShoe = (id) => {
+    setSelectedShoe(id);
+    console.log(id);
+  };
 
   return (
     <section className={classes.sneakers}>
       <AvailableSneakers
         selectedShoe={selectedShoe}
         setSelectedShoe={setSelectedShoe}
+        changeShoe={changeShoe}
       />
       <div className={classes["sneakers-content"]}>
         <h4>Sneaker Company</h4>

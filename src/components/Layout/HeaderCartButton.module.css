@@ -1,0 +1,17 @@
+.CartIcon {
+  position: relative;
+  max-width: 20%;
+  height: 40%;
+  cursor: pointer;
+}
+
+.cart-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 2px 7px;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 70%;
+  font-size: 0.7rem;
+  color: white;
+}
