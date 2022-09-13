@@ -1,29 +1,43 @@
 .shoeSection {
   position: relative;
+  width: 450px;
 }
 
 .displayedShoes {
   display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-}
-
-.displayedShoes > :nth-child(1) {
-  max-width: 100%;
-  border-radius: 15px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .displayedShoes > :nth-child(2) {
-  margin-top: 4rem;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: -2rem;
+  margin-left: -5rem;
+}
+
+.displayedShoes > :nth-child(1) {
+  margin-top: 1rem;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .thumbnails img {
   height: 70px;
   width: 70px;
   border-radius: 10px;
-  max-width: 100%;
   cursor: pointer;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+}
+
+.thumbnailActive img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid hsl(26, 100%, 55%);
 }

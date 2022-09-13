@@ -97,8 +97,9 @@
   background-color: hsl(26, 100%, 55%);
 }
 
-.add-to-cart img {
+.add-to-cart svg {
   width: 20px;
+  fill: hsl(0, 0%, 100%);
 }
 
 .removeDisabled {

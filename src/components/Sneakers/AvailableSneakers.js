@@ -45,10 +45,18 @@ const AvailableSneakers = (props) => {
               onClick={() => props.changeShoe(shoe.id)}
               className={classes.displayedShoes}
             >
-              {props.selectedShoe === shoe.id ? shoe.shoe : ""}
               <div>
-                <div className={classes.thumbnails}>{shoe.shoeThumbnail}</div>
+                <div
+                  className={
+                    props.selectedShoe === shoe.id
+                      ? classes.thumbnailActive
+                      : classes.thumbnails
+                  }
+                >
+                  {shoe.shoeThumbnail}
+                </div>
               </div>
+              {props.selectedShoe === shoe.id ? shoe.shoe : ""}
             </div>
           );
         })}
