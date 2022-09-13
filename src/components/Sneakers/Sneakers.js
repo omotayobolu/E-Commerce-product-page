@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import AvailableSneakers from "./AvailableSneakers";
-import Plus from "../../assets/icon-plus.svg";
-import Minus from "../../assets/icon-minus.svg";
-import CartIcon from "../../assets/icon-cart.svg";
 // import CartContext from "../store/Cart-context";
 import classes from "./Sneakers.module.css";
+import SneakersForm from "./SneakersForm";
 
 const Sneakers = (props) => {
   const [selectedShoe, setSelectedShoe] = useState("s1");
@@ -36,22 +34,11 @@ const Sneakers = (props) => {
           </div>
           <h3>50%</h3>
         </div>
-        <div className={classes.cart}>
-          <div className={classes.cart1}>
-            <img
-              onClick={props.removeShoe}
-              className={props.number === 0 ? classes.removeDisabled : ""}
-              src={Minus}
-              alt=""
-            />
-            {props.number}
-            <img onClick={props.addShoe} src={Plus} alt="" />
-          </div>
-          <button onClick={props.onShowCart} className={classes["add-to-cart"]}>
-            <img src={CartIcon} alt="" />
-            Add to Cart
-          </button>
-        </div>
+        <SneakersForm
+          number={props.number}
+          addShoe={props.addShoe}
+          removeShoe={props.removeShoe}
+        />
       </div>
     </section>
   );

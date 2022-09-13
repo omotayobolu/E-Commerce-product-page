@@ -11,9 +11,27 @@
 
 .content {
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  height: 80%;
+  flex-direction: column;
+  height: 100%;
   color: hsl(219, 9%, 45%);
+  padding: 1rem;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkout {
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  width: 100%;
 }

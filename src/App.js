@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {showCart && <Cart onHideCart={hideCartHandler} />}
+      {showCart && <Cart onClose={hideCartHandler} />}
       <Header number={number} onShowCart={showCartHandler} />
       <Sneakers
         onShowCart={showCartHandler}

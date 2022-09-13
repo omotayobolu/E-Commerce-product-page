@@ -1,0 +1,54 @@
+.cart {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart .cart1 {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: hsl(223, 64%, 98%);
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.cart .cart1 input {
+  width: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cart .cart1 > img {
+  cursor: pointer;
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  gap: 1rem;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+}
+
+.add-to-cart svg {
+  width: 20px;
+  fill: hsl(0, 0%, 100%);
+}
+
+.removeDisabled {
+  opacity: 0.5;
+}

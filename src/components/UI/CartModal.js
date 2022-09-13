@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import ReactDOM from "react-dom";
 
 import classes from "./CartModal.module.css";

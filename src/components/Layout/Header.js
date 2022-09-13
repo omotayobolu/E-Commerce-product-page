@@ -5,7 +5,7 @@ import HeaderAvatar from "../../assets/image-avatar.png";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.heading}>
       <div className={classes.headingContent}>
@@ -19,7 +19,7 @@ const Header = () => {
         </ul>
       </div>
       <div className={classes.headingContent2}>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
         <img src={HeaderAvatar} alt="" />
       </div>
     </header>
