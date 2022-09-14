@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Sneakers from "./components/Sneakers/Sneakers";
+import CartProvider from "./store/CartProvider";
 
 const App = () => {
   const [showCart, setShowCart] = useState(false);
@@ -33,14 +34,16 @@ const App = () => {
 
   return (
     <div className="App">
-      {showCart && <Cart onClose={hideCartHandler} />}
-      <Header number={number} onShowCart={showCartHandler} />
-      <Sneakers
-        onShowCart={showCartHandler}
-        number={number}
-        addShoe={addShoe}
-        removeShoe={removeShoe}
-      />
+      <CartProvider>
+        {showCart && <Cart onClose={hideCartHandler} />}
+        <Header number={number} onShowCart={showCartHandler} />
+        <Sneakers
+          onShowCart={showCartHandler}
+          number={number}
+          addShoe={addShoe}
+          removeShoe={removeShoe}
+        />
+      </CartProvider>
     </div>
   );
 };

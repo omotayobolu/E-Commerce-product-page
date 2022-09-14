@@ -9,10 +9,10 @@
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   right: 10%;
   top: 15%;
-  width: 310px;
+  width: 350px;
   height: 250px;
   background-color: white;
   border-radius: 10px;

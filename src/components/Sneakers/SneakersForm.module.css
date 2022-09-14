@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
 .cart .cart1 {
@@ -23,6 +24,7 @@
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
+  background-color: hsl(223, 64%, 98%);
 }
 
 .cart .cart1 > img {
@@ -51,4 +53,12 @@
 
 .removeDisabled {
   opacity: 0.5;
+}
+
+.addError {
+  position: absolute;
+  color: rgb(233, 46, 46);
+  width: 100%;
+  bottom: -50%;
+  font-size: 0.8rem;
 }
