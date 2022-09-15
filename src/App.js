@@ -4,7 +4,7 @@ import Header from "./components/Layout/Header";
 import Sneakers from "./components/Sneakers/Sneakers";
 import CartProvider from "./store/CartProvider";
 
-const App = () => {
+const App = (props) => {
   const [showCart, setShowCart] = useState(false);
   const [number, setNumber] = useState(0);
 
@@ -35,7 +35,9 @@ const App = () => {
   return (
     <div className="App">
       <CartProvider>
-        {showCart && <Cart onClose={hideCartHandler} />}
+        {showCart && (
+          <Cart selectedShoe={props.selectedShoe} onClose={hideCartHandler} />
+        )}
         <Header number={number} onShowCart={showCartHandler} />
         <Sneakers
           onShowCart={showCartHandler}

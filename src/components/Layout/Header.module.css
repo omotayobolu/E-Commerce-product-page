@@ -1,8 +1,9 @@
 .heading {
-  padding: 2rem 0;
   border-bottom: 1px solid hsl(220, 14%, 75%);
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .headingContent {
@@ -21,11 +22,13 @@
   color: hsl(219, 9%, 45%);
   font-weight: 400;
   cursor: pointer;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .nav-items > *:hover {
   color: hsl(220, 13%, 13%);
-  /* border-bottom: 5px solid hsl(26, 100%, 55%); */
+  border-bottom: 3px solid hsl(26, 100%, 55%);
 }
 
 .headingContent2 {
@@ -43,4 +46,25 @@
 .headingContent2 > :nth-child(2):hover {
   border-radius: 50%;
   border: 2px solid hsl(26, 100%, 55%);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    position: fixed;
+    width: 100%;
+    border: none;
+    padding-top: 0;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-items > * {
+    margin-top: 0;
+  }
+
+  .headingContent2 > :nth-child(2) {
+    width: 25%;
+  }
 }

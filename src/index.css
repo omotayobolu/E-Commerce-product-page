@@ -18,3 +18,9 @@ body {
 ul {
   list-style-type: none;
 }
+
+@media (max-width: 768px) {
+  .App {
+    margin: 0 5%;
+  }
+}

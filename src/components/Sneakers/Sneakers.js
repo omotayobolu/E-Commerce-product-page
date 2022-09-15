@@ -44,7 +44,7 @@ const Sneakers = (props) => {
         </p>
         <div className={classes.prices}>
           <div className={classes.ogprice}>
-            <h2>${SHOES.price}</h2>
+            <h2>${SHOES.price}.00</h2>
             <h3>$250.00</h3>
           </div>
           <h3>50%</h3>

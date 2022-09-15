@@ -34,6 +34,11 @@
   cursor: pointer;
   letter-spacing: 0.5px;
   width: 100%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout:hover {
+  opacity: 0.8;
 }
 
 .empty {

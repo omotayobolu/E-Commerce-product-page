@@ -15,3 +15,7 @@
   font-size: 0.7rem;
   color: white;
 }
+
+.noNumber {
+  display: none;
+}

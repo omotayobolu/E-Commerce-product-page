@@ -44,6 +44,11 @@
   cursor: pointer;
   color: hsl(0, 0%, 100%);
   background-color: hsl(26, 100%, 55%);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart:hover {
+  opacity: 0.8;
 }
 
 .add-to-cart svg {
@@ -61,4 +66,22 @@
   width: 100%;
   bottom: -50%;
   font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .cart {
+    flex-direction: column;
+  }
+
+  .cart .cart1 {
+    width: 100%;
+  }
+
+  .add-to-cart {
+    width: 100%;
+  }
+
+  .addError {
+    bottom: 45%;
+  }
 }

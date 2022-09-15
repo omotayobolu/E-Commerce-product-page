@@ -14,7 +14,13 @@ const HeaderCartButton = (props) => {
   return (
     <div className={classes.CartIcon}>
       <img onClick={props.onClick} src={CartIcon} alt="" />
-      <div className={classes["cart-number"]}>{numberOfCartItems}</div>
+      <div
+        className={
+          numberOfCartItems > 0 ? classes["cart-number"] : classes.noNumber
+        }
+      >
+        {numberOfCartItems}
+      </div>
     </div>
   );
 };

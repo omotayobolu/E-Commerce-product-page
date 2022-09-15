@@ -25,6 +25,7 @@ const Cart = (props) => {
           amount={item.amount}
           onRemove={CartItemRemoveHandler.bind(null, item.id)}
           totalAmount={totalAmount}
+          image={props.selectedShoe}
         />
       ))}
     </ul>

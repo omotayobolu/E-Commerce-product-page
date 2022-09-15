@@ -1,14 +1,27 @@
-import React from "react";
+// import React, { useState } from "react";
 
 import Logo from "../../assets/logo.svg";
 import HeaderAvatar from "../../assets/image-avatar.png";
-import classes from "./Header.module.css";
+// import IconClose from "../../assets/icon-close.svg";
+// import IconMenu from "../../assets/icon-menu.svg";
+
 import HeaderCartButton from "./HeaderCartButton";
+import classes from "./Header.module.css";
 
 const Header = (props) => {
+  // const [toggleMenu, setToggleMenu] = useState(false);
+  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  // const toggleNav = () => {
+  //   setToggleMenu(!toggleMenu);
+  // };
+
   return (
     <header className={classes.heading}>
       <div className={classes.headingContent}>
+        {/* <button>
+          <img src={IconMenu} alt="" />
+        </button> */}
         <img src={Logo} alt="" />
         <ul className={classes["nav-items"]}>
           <li>Collections</li>

@@ -5,7 +5,7 @@ import { FaTrash } from "react-icons/fa";
 const CartItem = (props) => {
   return (
     <li className={classes["cart-content"]}>
-      <div>image</div>
+      <div>{props.image}</div>
       <div>
         <div className={classes.summary}>
           {props.name}
