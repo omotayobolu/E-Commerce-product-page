@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .headingContent {
@@ -48,23 +50,49 @@
   border: 2px solid hsl(26, 100%, 55%);
 }
 
+.nav-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none;
+  position: absolute;
+  left: 3%;
+  top: 0.7rem;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 3rem;
+}
+
 @media (max-width: 768px) {
   .heading {
     position: fixed;
-    width: 100%;
     border: none;
     padding-top: 0;
   }
 
   .nav-items {
-    display: none;
+    flex-direction: column;
   }
 
   .nav-items > * {
     margin-top: 0;
   }
 
+  .nav-items > *:hover {
+    border-bottom: none;
+  }
+
   .headingContent2 > :nth-child(2) {
     width: 25%;
+  }
+
+  .nav-btn {
+    display: block;
+  }
+
+  .headingContent2 {
+    gap: 1rem;
   }
 }
