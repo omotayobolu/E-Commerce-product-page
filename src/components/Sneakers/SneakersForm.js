@@ -22,6 +22,8 @@ const SneakersForm = (props) => {
     ) {
       setAmountIsValid(false);
       return;
+    } else {
+      setAmountIsValid(true);
     }
 
     props.onAddToCart(enteredAmountNumber);

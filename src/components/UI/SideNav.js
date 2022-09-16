@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import classes from "./SideNav.module.css";
 
 const Backdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onCloseNav} />;
+  return <div className={classes.backdrop} onClick={props.onToggleNav} />;
 };
 
 const NavOverlay = (props) => {
@@ -21,7 +21,7 @@ const SideNav = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <Backdrop onCloseNav={props.onCloseNav} />,
+        <Backdrop onToggleNav={props.onToggleNav} />,
         portalElement
       )}
       {ReactDOM.createPortal(
