@@ -30,6 +30,7 @@ const Sneakers = (props) => {
   return (
     <section className={classes.sneakers}>
       <AvailableSneakers
+        screenWidth={props.screenWidth}
         selectedShoe={selectedShoe}
         setSelectedShoe={setSelectedShoe}
         changeShoe={changeShoe}

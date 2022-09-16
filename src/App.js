@@ -62,6 +62,7 @@ const App = (props) => {
           onShowCart={showCartHandler}
         />
         <Sneakers
+          screenWidth={screenWidth}
           onShowCart={showCartHandler}
           number={number}
           addShoe={addShoe}

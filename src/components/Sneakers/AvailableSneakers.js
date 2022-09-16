@@ -1,5 +1,8 @@
 import React from "react";
 
+import "@splidejs/react-splide/css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import Shoe1 from "../../assets/image-product-1.jpg";
 import Shoe1Thumbnail from "../../assets/image-product-1-thumbnail.jpg";
 import Shoe2 from "../../assets/image-product-2.jpg";
@@ -36,32 +39,53 @@ const SNEAKERS_AVAILABLE = [
 
 const AvailableSneakers = (props) => {
   return (
-    <div>
-      <div className={classes.shoeSection}>
-        {SNEAKERS_AVAILABLE.map((shoe) => {
-          return (
-            <div
-              key={shoe.id}
-              onClick={() => props.changeShoe(shoe.id)}
-              className={classes.displayedShoes}
-            >
-              <div>
-                <div
-                  className={
-                    props.selectedShoe === shoe.id
-                      ? classes.thumbnailActive
-                      : classes.thumbnails
-                  }
-                >
-                  {shoe.shoeThumbnail}
+    <section>
+      {props.screenWidth <= 768 ? (
+        <div className={classes["shoe-mobile"]}>
+          <Splide
+            options={{
+              perPage: 1,
+              arrows: true,
+              pagination: true,
+              width: "100%",
+            }}
+          >
+            {SNEAKERS_AVAILABLE.map((item) => {
+              return (
+                <SplideSlide key={item.id}>
+                  <div className={classes.slideShoe}>{item.shoe}</div>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        </div>
+      ) : (
+        <div className={classes.shoeSection}>
+          {SNEAKERS_AVAILABLE.map((shoe) => {
+            return (
+              <div
+                key={shoe.id}
+                onClick={() => props.changeShoe(shoe.id)}
+                className={classes.displayedShoes}
+              >
+                <div>
+                  <div
+                    className={
+                      props.selectedShoe === shoe.id
+                        ? classes.thumbnailActive
+                        : classes.thumbnails
+                    }
+                  >
+                    {shoe.shoeThumbnail}
+                  </div>
                 </div>
+                {props.selectedShoe === shoe.id ? shoe.shoe : ""}
               </div>
-              {props.selectedShoe === shoe.id ? shoe.shoe : ""}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+            );
+          })}
+        </div>
+      )}
+    </section>
   );
 };
 

@@ -63,6 +63,13 @@
 @media (max-width: 768px) {
   .sneakers {
     flex-direction: column;
+    margin: 0;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .sneakers-content {
+    margin-top: 0;
   }
 
   .sneakers-content h1 {

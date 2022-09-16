@@ -50,4 +50,12 @@
   .shoeSection {
     display: none;
   }
+
+  .shoe-mobile {
+    margin-top: 2.5rem;
+  }
+
+  .slideShoe > img {
+    max-width: 100%;
+  }
 }

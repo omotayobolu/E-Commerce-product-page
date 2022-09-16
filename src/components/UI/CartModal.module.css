@@ -25,6 +25,7 @@
 
 @media (max-width: 768px) {
   .modal {
+    position: fixed;
     top: 10%;
     right: 5%;
   }
