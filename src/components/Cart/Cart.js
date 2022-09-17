@@ -4,6 +4,7 @@ import CartItem from "./CartItem";
 import CartModal from "../UI/CartModal";
 import CartContext from "../../store/cart-context";
 import classes from "./Cart.module.css";
+import { nanoid } from "nanoid";
 
 const Cart = (props) => {
   const CartCtx = useContext(CartContext);
@@ -19,13 +20,12 @@ const Cart = (props) => {
     <ul className={classes["cart-items"]}>
       {CartCtx.items.map((item) => (
         <CartItem
-          key={item.id}
+          key={nanoid}
           name={item.name}
           price={item.price}
           amount={item.amount}
           onRemove={CartItemRemoveHandler.bind(null, item.id)}
           totalAmount={totalAmount}
-          image={props.selectedShoe}
         />
       ))}
     </ul>

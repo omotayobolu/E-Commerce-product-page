@@ -34,10 +34,6 @@ const App = (props) => {
     setShowCart(false);
   };
 
-  // const setNoOfCartItemsHandler = () => {
-  //   return setNumber(number);
-  // };
-
   const addShoe = () => {
     setNumber((prevNumber) => prevNumber + 1);
   };

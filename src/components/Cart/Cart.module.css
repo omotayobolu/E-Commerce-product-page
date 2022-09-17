@@ -67,3 +67,8 @@
   font-size: 1rem;
   color: hsl(220, 13%, 13%);
 }
+
+.cart-image {
+  height: 50px;
+  width: 50px;
+}

@@ -38,7 +38,12 @@ const SneakersForm = (props) => {
           src={Minus}
           alt=""
         />
-        <input id="amount" ref={amountInputRef} value={props.number} />
+        <input
+          id="amount"
+          ref={amountInputRef}
+          value={props.number}
+          onChange={(e) => e.target.value}
+        />
         <img onClick={props.addShoe} src={Plus} alt="" />
       </div>
       <button className={classes["add-to-cart"]}>

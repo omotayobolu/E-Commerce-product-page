@@ -1,11 +1,12 @@
 import React from "react";
 import classes from "./Cart.module.css";
+import CartImage from "../../assets/image-product-1-thumbnail.jpg";
 import { FaTrash } from "react-icons/fa";
 
 const CartItem = (props) => {
   return (
     <li className={classes["cart-content"]}>
-      <div>{props.image}</div>
+      <img className={classes["cart-image"]} src={CartImage} alt="" />
       <div>
         <div className={classes.summary}>
           {props.name}
@@ -16,7 +17,6 @@ const CartItem = (props) => {
           </div>
         </div>
       </div>
-
       <FaTrash style={{ cursor: "pointer" }} onClick={props.onRemove} />
     </li>
   );

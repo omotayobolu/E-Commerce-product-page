@@ -46,7 +46,8 @@ const AvailableSneakers = (props) => {
             options={{
               perPage: 1,
               arrows: true,
-              pagination: true,
+              pagination: false,
+              drag: false,
               width: "100%",
             }}
           >
