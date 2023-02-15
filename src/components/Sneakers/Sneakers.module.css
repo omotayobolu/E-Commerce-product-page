@@ -92,3 +92,63 @@
     padding: 0;
   }
 }
+
+.shoeSection {
+  position: relative;
+  width: 450px;
+}
+
+.displayedShoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.displayedShoes > :nth-child(2) {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: -2rem;
+  margin-left: -5rem;
+}
+
+.displayedShoes > :nth-child(1) {
+  margin-top: 1rem;
+}
+
+.thumbnails img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbnails img:hover {
+  opacity: 0.3;
+}
+
+.thumbnailActive img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid hsl(26, 100%, 55%);
+}
+
+.shoeImage img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .shoeSection {
+    display: none;
+  }
+
+  .shoe-mobile {
+    margin-top: 15%;
+  }
+
+  .slideShoe > img {
+    max-width: 100%;
+  }
+}
